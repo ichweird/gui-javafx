@@ -1,0 +1,718 @@
+package application;
+
+import javafx.scene.control.TextField;
+
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage stage) throws Exception {
+     
+    	Group root = new Group();
+    	
+        Scene scene = new Scene(root, Color.LIGHTSEAGREEN);
+        
+        stage.setScene(scene);
+        
+        Group root1 = new Group();
+        Scene scene1 = new Scene(root1, Color.WHITE);
+    
+        Group root2 = new Group();
+        Scene scenecertificat = new Scene(root2, Color.LIGHTSEAGREEN);
+        
+        
+        Group root3 = new Group();
+        Scene scene3 = new Scene(root3, Color.WHITE);
+        
+        Group root4 = new Group();
+        Scene scene4 = new Scene(root4, Color.WHITE);
+        Group root5 = new Group();
+        Scene scene5 = new Scene(root5, Color.WHITE);
+       
+        stage.setHeight(690);
+        stage.setWidth(1300);
+        
+        Image icon =new Image("dwa.pnj.png");
+        stage.getIcons().add(icon);
+        stage.setTitle("gestion du cabinet medical");
+
+        
+        Rectangle rectangle = new Rectangle ();
+        rectangle.setX(295);
+        rectangle.setY(10);
+        rectangle.setWidth(970);
+        rectangle.setHeight(625);
+        rectangle.setFill(Color.LIGHTSEAGREEN);
+        rectangle.setArcHeight(50.0d);
+        rectangle.setArcWidth(50.0d);
+        
+        Rectangle rectangle5 = new Rectangle ();
+        rectangle5.setX(295);
+        rectangle5.setY(10);
+        rectangle5.setWidth(970);
+        rectangle5.setHeight(625);
+        rectangle5.setFill(Color.LIGHTSEAGREEN);
+        rectangle5.setArcHeight(50.0d);
+        rectangle5.setArcWidth(50.0d);
+
+        
+        Rectangle rectangle1 = new Rectangle ();
+        rectangle1.setX(295);
+        rectangle1.setY(10);
+        rectangle1.setWidth(970);
+        rectangle1.setHeight(625);
+        rectangle1.setFill(Color.LIGHTSEAGREEN);
+        rectangle1.setArcHeight(50.0d);
+        rectangle1.setArcWidth(50.0d);
+        
+        
+        
+        Rectangle rectangle2 = new Rectangle ();
+        rectangle2.setX(295);
+        rectangle2.setY(10);
+        rectangle2.setWidth(970);
+        rectangle2.setHeight(625);
+        rectangle2.setFill(Color.WHITE);
+        rectangle2.setArcHeight(50.0d);
+        rectangle2.setArcWidth(50.0d);
+        
+        Rectangle rectangle0 = new Rectangle ();
+        rectangle0.setX(295);
+        rectangle0.setY(10);
+        rectangle0.setWidth(970);
+        rectangle0.setHeight(625);
+        rectangle0.setFill(Color.WHITE);
+        rectangle0.setArcHeight(50.0d);
+        rectangle0.setArcWidth(50.0d);
+        
+        
+        Rectangle rectangle3 = new Rectangle ();
+        rectangle3.setX(295);
+        rectangle3.setY(10);
+        rectangle3.setWidth(970);
+        rectangle3.setHeight(625);
+        rectangle3.setFill(Color.LIGHTSEAGREEN);
+        rectangle3.setArcHeight(50.0d);
+        rectangle3.setArcWidth(50.0d);
+        
+
+        Text text = new Text("-Bonjour Dr.ben-");
+        text.setX(20);
+        text.setY(100);
+        text.setFont(Font.font("Arial", 35));
+        text.setFill(Color.WHITE);
+        
+        Text welcome = new Text("      BIENVENUE! \n choisisez une option:");
+        
+        
+        welcome.setX(550);
+        welcome.setY(200);
+        welcome.setFont(Font.font("ARIAL", 47));
+        welcome.setFill(Color.BLACK);
+        
+
+        
+        Image img =new Image("tbiba2.png");
+        ImageView imageView = new ImageView(img);
+        
+        imageView.setLayoutX(850);
+        imageView.setLayoutY(135);
+       
+        Image imgi =new Image("calnder.png");
+        ImageView imageView3 = new ImageView(imgi);
+        
+        imageView3.setLayoutX(950);
+        imageView3.setLayoutY(300);
+        
+        imageView3.setFitWidth(200);  // Adjust width as needed
+        imageView3.setFitHeight(200);
+        
+        
+        Image imgY =new Image("tbiba3.png");
+        ImageView imageView4= new ImageView(imgY);
+        
+        imageView4.setLayoutX(950);
+        imageView4.setLayoutY(400);
+        
+        imageView4.setFitWidth(200);  // Adjust width as needed
+        imageView4.setFitHeight(200);
+        
+     
+        
+        Image img2 =new Image("PRO.png");
+        ImageView imageView2 = new ImageView(img2);
+       
+        imageView2.setLayoutX(950);
+        imageView2.setLayoutY(300);
+        
+        imageView2.setFitWidth(200);  // Adjust width as needed
+        imageView2.setFitHeight(200);
+        
+       
+//-------------------------------------------------------------------------
+        
+        Button rdv = new Button("Prendre un RDV"); // Définissez le texte du bouton
+
+        rdv.setLayoutX(15); // Définissez la position X du bouton
+        rdv.setLayoutY(150); // Définissez la position Y du bouton
+        rdv.setFont(new Font("Arial",23));
+        //acceder a rdv
+        rdv.setOnAction(event -> {
+            // Logic to switch to scene1
+            stage.setScene(scene4);
+        });
+        
+        TextField name4 = new TextField();
+       	
+       	name4.setPromptText("NOM...");
+        name4.setLayoutX(450);
+        name4.setLayoutY(100);
+        name4.setPrefWidth(200);
+        name4.setPrefHeight(50);
+        // entrer le nom
+        Button buttonname4 = new Button("ok");
+        
+        buttonname4.setLayoutX(450);
+        buttonname4.setLayoutY(155);
+        buttonname4.setFont(new Font("Arial", 17));
+        buttonname4.setOnAction(e -> System.out.println(name4.getText()));
+        
+        //textfield du prenom scene4 
+        
+    	//text field te3 scene te3 RDV
+        TextField prenom4 = new TextField();
+        prenom4.setPromptText("PRENOM...");
+        prenom4.setLayoutX(750);
+        prenom4.setLayoutY(100);
+        prenom4.setPrefWidth(200);
+        prenom4.setPrefHeight(50);
+        // entrer le prenom
+        Button buttonpre4 = new Button("ok");
+        
+        buttonpre4.setLayoutX(750);
+        buttonpre4.setLayoutY(155);
+        buttonpre4.setFont(new Font("Arial", 17));
+        
+        buttonpre4.setOnAction(e -> System.out.println(prenom4.getText()));
+        
+        
+        
+        Button backrdv = new Button("retour");
+        backrdv.setOnAction(event -> {
+           
+            stage.setScene(scene);
+        });
+        
+        
+        backrdv.setLayoutX(30);
+        backrdv.setLayoutY(30);
+        backrdv.setFont(new Font("Arial", 17));
+        
+        //enter l'heure
+        TextField HEURE = new TextField();
+        HEURE.setPromptText("L'HEURE...");
+        HEURE.setLayoutX(450);
+        HEURE.setLayoutY(230);
+        HEURE.setPrefWidth(200);
+        HEURE.setPrefHeight(50);
+        
+        
+        // entrer l'heure
+        Button buttonHEURE = new Button("ok");
+        
+        buttonHEURE.setLayoutX(450);
+        buttonHEURE.setLayoutY(285);
+        buttonHEURE.setFont(new Font("Arial", 17));
+        
+        buttonHEURE.setOnAction(e -> System.out.println(HEURE.getText()));
+        
+     // entrer la duree scene1
+        
+        TextField daterdv = new TextField();
+        daterdv.setPromptText("LA DATE...");
+        daterdv.setLayoutX(750);
+        daterdv.setLayoutY(230);
+        daterdv.setPrefWidth(200);
+        daterdv.setPrefHeight(50);
+        
+        //enter la date 
+        Button buttondaterdv = new Button("ok");
+        
+        buttondaterdv.setLayoutX(750);
+        buttondaterdv.setLayoutY(285);
+        buttondaterdv.setFont(new Font("Arial", 17));
+        buttondaterdv.setOnAction(e -> System.out.println(daterdv.getText()));
+        
+//-------------------------------------------------------------------------
+        Text textrdv = new Text("-Prendre un RDV-");
+        textrdv.setX(20);
+        textrdv.setY(170);
+        textrdv.setFont(Font.font("Arial", 23));
+        
+        Text textobsr = new Text("-L'bservation medicale-");
+        textobsr.setX(20);
+        textobsr.setY(410);
+        textobsr.setFont(Font.font("Arial", 23));
+        
+        Text textFICH = new Text("-Fiche du patient-");
+        textFICH.setX(20);
+        textFICH.setY(350);
+        textFICH.setFont(Font.font("Arial", 23));
+        
+ //------------------------------------------------------------------------------
+        
+        //BUTTON ORDONNANCE
+    
+        Button ordonnance = new Button("Ecrire une ordonnance");
+        
+        ordonnance.setLayoutX(15); // Définissez la position X du bouton1
+        ordonnance.setLayoutY(230); // Définissez la position Y du bouton1
+        ordonnance.setFont(new Font("Arial",23));
+        
+        // pour acceder a ordonnance
+        
+        ordonnance.setOnAction(event -> {
+            // Logic to switch to scene1
+            stage.setScene(scene1);
+        });
+        
+        
+        Button backButton = new Button("retour");
+        backButton.setOnAction(event -> {
+            // Logic to switch back to the main scene
+            stage.setScene(scene);
+        });
+        //button retour a scene principale
+        backButton.setLayoutX(30);
+        backButton.setLayoutY(30);
+        backButton.setFont(new Font("Arial", 17));
+//-----------------------------------------------------------------------------------
+        Button Fiche = new Button("Fiche du patient");
+        
+        Fiche.setLayoutX(15); // Définissez la position X du bouton1
+        Fiche.setLayoutY(310); // Définissez la position Y du bouton1
+        Fiche.setFont(new Font("Arial",23));
+      
+        Fiche.setOnAction(event -> {
+            // Logic to switch back to the main scene
+            stage.setScene(scene3);
+        });
+        
+        Button backfiche = new Button("retour");
+        backfiche.setOnAction(event -> {
+            // Logic to switch back to the main scene
+            stage.setScene(scene);
+        });
+        //button retour a scene principale
+        backfiche.setLayoutX(30);
+        backfiche.setLayoutY(30);
+        backfiche.setFont(new Font("Arial", 17));
+    	//text field te3 scene te3 fiche patiant
+        TextField name3 = new TextField();
+       	
+       	name3.setPromptText("NOM...");
+        name3.setLayoutX(450);
+        name3.setLayoutY(100);
+        name3.setPrefWidth(200);
+        name3.setPrefHeight(50);
+        //enter le nom
+        Button buttonname3 = new Button("ok");
+        
+        buttonname3.setLayoutX(450);
+        buttonname3.setLayoutY(155);
+        buttonname3.setFont(new Font("Arial", 17));
+        buttonname3.setOnAction(e -> System.out.println(name3.getText()));
+        
+        //textfield du prenom scene3 
+        
+    	//text field te3 scene te3 fiche patiant
+        TextField prenom3 = new TextField();
+        prenom3.setPromptText("EPRENOM...");
+        prenom3.setLayoutX(750);
+        prenom3.setLayoutY(100);
+        prenom3.setPrefWidth(200);
+        prenom3.setPrefHeight(50);
+        
+        //enter le prenom
+        Button buttonpre3 = new Button("ok");
+        
+        buttonpre3.setLayoutX(750);
+        buttonpre3.setLayoutY(155);
+        buttonpre3.setFont(new Font("Arial", 17));
+        
+        buttonpre3.setOnAction(e -> System.out.println(prenom3.getText()));
+        
+        //enter le num tel scene 3 
+        TextField num = new TextField();
+        num.setPromptText("NUMERO DE TELEPHONE...");
+        num.setLayoutX(450);
+        num.setLayoutY(230);
+        num.setPrefWidth(200);
+        num.setPrefHeight(50);
+        
+        //enter le NUMERO de tel
+        Button buttonnum = new Button("ok");
+        
+        buttonnum.setLayoutX(450);
+        buttonnum.setLayoutY(285);
+        buttonnum.setFont(new Font("Arial", 17));
+        
+        buttonnum.setOnAction(e -> System.out.println(num.getText()));
+       
+        
+        
+        
+        // button observation
+        Button consultation = new Button("L'observation médicale");
+        
+        consultation.setLayoutX(15); // Définissez la position X du bouton1
+        consultation.setLayoutY(390); // Définissez la position Y du bouton1
+        consultation.setFont(new Font("Arial",23));
+        
+
+        TextField name5 = new TextField();
+        name5.setPromptText("NOM...");
+        name5.setLayoutX(450);
+        name5.setLayoutY(100);
+        name5.setPrefWidth(200);
+        name5.setPrefHeight(50);
+        
+        //entrer le nom
+        Button buttonname5 = new Button("ok");
+        
+        buttonname5.setLayoutX(450);
+        buttonname5.setLayoutY(155);
+        buttonname5.setFont(new Font("Arial", 17));
+        
+        buttonname5.setOnAction(e -> System.out.println(name5.getText()));
+        
+     // entrer le prenom scene5 
+        
+        TextField prenom5 = new TextField();
+        prenom5.setPromptText("PRENOM...");
+        prenom5.setLayoutX(750);
+        prenom5.setLayoutY(100);
+        prenom5.setPrefWidth(200);
+        prenom5.setPrefHeight(50);
+        
+        //entrer le prenom 
+        Button buttonpre5 = new Button("ok");
+        
+        buttonpre5.setLayoutX(750);
+        buttonpre5.setLayoutY(155);
+        buttonpre5.setFont(new Font("Arial", 17));
+        
+        buttonpre5.setOnAction(e -> System.out.println(prenom5.getText()));
+        
+        
+      //button retour a scene principale
+        Button backo = new Button("retour");
+        backo.setOnAction(event -> {
+            // Logic to switch back to the main scene
+            stage.setScene(scene);
+        });
+        
+        backo.setLayoutX(30);
+        backo.setLayoutY(30);
+        backo.setFont(new Font("Arial", 17));
+        
+        consultation.setOnAction(event -> {
+            // Logic to switch back to the main scene
+            stage.setScene(scene5);
+        });
+     // entrer les antécédents chirurgicaux scene5
+        
+        TextField chirurgicaux = new TextField();
+        chirurgicaux.setPromptText("antécédents chirurgicaux");
+        chirurgicaux.setLayoutX(450);
+        chirurgicaux.setLayoutY(230);
+        chirurgicaux.setPrefWidth(200);
+        chirurgicaux.setPrefHeight(50);
+        
+        
+        //entrer les antécédents chirurgicaux
+        
+        Button buttonchirurgicaux = new Button("ok");
+        
+        buttonchirurgicaux.setLayoutX(450);
+        buttonchirurgicaux.setLayoutY(285);
+        buttonchirurgicaux.setFont(new Font("Arial", 17));
+        
+        buttonchirurgicaux.setOnAction(e -> System.out.println(chirurgicaux.getText()));
+        
+     // entrer les antécédents médicaux scene5
+        
+        TextField médicaux = new TextField();
+        médicaux.setPromptText("les antécédents médicaux");
+        médicaux.setLayoutX(750);
+        médicaux.setLayoutY(230);
+        médicaux.setPrefWidth(200);
+        médicaux.setPrefHeight(50);
+        
+        //entrer les antécédents médicaux
+        Button buttonmédicaux = new Button("ok");
+        
+        buttonmédicaux.setLayoutX(750);
+        buttonmédicaux.setLayoutY(285);
+        buttonmédicaux.setFont(new Font("Arial", 17));
+        buttonmédicaux.setOnAction(e -> System.out.println(médicaux.getText()));
+        
+//-----la taille --------
+        
+        TextField taille = new TextField();
+        taille.setPromptText("TAILLE...");
+        taille.setLayoutX(450);
+        taille.setLayoutY(360);
+        taille.setPrefWidth(200);
+        taille.setPrefHeight(50);
+        
+        //entrer la taille
+        Button buttontaille = new Button("ok");
+        
+        buttontaille.setLayoutX(450);
+        buttontaille.setLayoutY(415);
+        buttontaille.setFont(new Font("Arial", 17));
+        buttontaille.setOnAction(e -> System.out.println(chirurgicaux.getText()));
+        
+     // entrer les antécédents médicaux scene5
+        
+        TextField poids = new TextField();
+        poids.setPromptText("LE POIDS...");
+        poids.setLayoutX(750);
+        poids.setLayoutY(360);
+        poids.setPrefWidth(200);
+        poids.setPrefHeight(50);
+        
+        // entrer le poids
+        Button buttonpoids = new Button("ok");
+        
+        buttonpoids.setLayoutX(750);
+        buttonpoids.setLayoutY(415);
+        buttonpoids.setFont(new Font("Arial", 17));
+        buttonpoids.setOnAction(e -> System.out.println(médicaux.getText()));
+        
+                
+        
+        //text prmiere scene ordonnance
+        
+        
+        
+        Text textscene1 = new Text("-Ecrire une ordonnance-");
+        textscene1.setX(20);
+        textscene1.setY(255);
+        textscene1.setFont(Font.font("Arial", 23));
+        
+        
+        
+        Text textsceneCAT = new Text("-Ecrire une certificat-");
+        textsceneCAT.setX(20);
+        textsceneCAT.setY(255);
+        textsceneCAT.setFont(Font.font("Arial", 23));
+      
+  // entrer le nom scene1
+        TextField name1 = new TextField();
+        name1.setPromptText("NOM...");
+        name1.setLayoutX(450);
+        name1.setLayoutY(100);
+        name1.setPrefWidth(200);
+        name1.setPrefHeight(50);
+        
+        //entrer le nom
+        Button buttonname1 = new Button("ok");
+        
+        buttonname1.setLayoutX(450);
+        buttonname1.setLayoutY(155);
+        buttonname1.setFont(new Font("Arial", 17));
+        
+        buttonname1.setOnAction(e -> System.out.println(name1.getText()));
+        
+     // entrer le prenom scene1 
+        
+        TextField prenom1 = new TextField();
+        prenom1.setPromptText("PRENOM...");
+        prenom1.setLayoutX(750);
+        prenom1.setLayoutY(100);
+        prenom1.setPrefWidth(200);
+        prenom1.setPrefHeight(50);
+        
+      //entrer le prenom
+        Button buttonpre1 = new Button("ok");
+        
+        buttonpre1.setLayoutX(750);
+        buttonpre1.setLayoutY(155);
+        buttonpre1.setFont(new Font("Arial", 17));
+        
+        buttonpre1.setOnAction(e -> System.out.println(prenom1.getText()));
+        
+     // entrer les medicaments scene1
+       
+        TextField dwa = new TextField();
+        dwa.setPromptText("LE MEDICAMENT...");
+        dwa.setLayoutX(450);
+        dwa.setLayoutY(230);
+        dwa.setPrefWidth(200);
+        dwa.setPrefHeight(50);
+     // entrer les medicaments dans la data base
+        Button buttondwa = new Button("ok");
+        
+        buttondwa.setLayoutX(450);
+        buttondwa.setLayoutY(285);
+        buttondwa.setFont(new Font("Arial", 17));
+        
+        buttondwa.setOnAction(e -> System.out.println(dwa.getText()));
+        
+     // entrer la duree scene1
+        
+        TextField duree = new TextField();
+        duree.setPromptText("LA DUREE...");
+        duree.setLayoutX(750);
+        duree.setLayoutY(230);
+        duree.setPrefWidth(200);
+        duree.setPrefHeight(50);
+        
+        // entrer la duree dans la data base
+        Button buttonduree = new Button("ok");
+        
+        buttonduree.setLayoutX(750);
+        buttonduree.setLayoutY(285);
+        buttonduree.setFont(new Font("Arial", 17));
+        
+        buttonduree.setOnAction(e -> System.out.println(duree.getText()));
+        
+        // button certificat 
+        
+        Button buttoncat = new Button("demande de crtificat medicale");
+       
+        buttoncat.setLayoutX(500);
+        buttoncat.setLayoutY(450);
+        buttoncat.setFont(new Font("Arial", 25));
+        
+        buttoncat.setOnAction(event -> {
+            // Logic to switch to scene1
+            stage.setScene(scenecertificat);
+        });
+        
+        //retour de certificat 
+        
+       Button buttonret = new Button("retour");
+        
+       
+       buttonret.setOnAction(event -> {
+           // Logic to switch back to the main scene
+           stage.setScene(scene1);
+       });
+       //button retour a scene principale
+       buttonret.setLayoutX(30);
+       buttonret.setLayoutY(30);
+       buttonret.setFont(new Font("Arial", 17));
+        // attributs de certificat 
+       
+       TextField name2 = new TextField();
+       name2.setPromptText("NOM...");
+       name2.setLayoutX(450);
+       name2.setLayoutY(100);
+       name2.setPrefWidth(200);
+       name2.setPrefHeight(50);
+       
+       // entrer le nom dans la data base
+       Button buttonname2 = new Button("ok");
+       
+       buttonname2.setLayoutX(450);
+       buttonname2.setLayoutY(155);
+       buttonname2.setFont(new Font("Arial", 17));
+       
+       buttonname2.setOnAction(e -> System.out.println(name2.getText()));
+       
+    // entrer le prenom scene1 
+       
+       TextField prenom2 = new TextField();
+       prenom2.setPromptText("PRENOM...");
+       prenom2.setLayoutX(750);
+       prenom2.setLayoutY(100);
+       prenom2.setPrefWidth(200);
+       prenom2.setPrefHeight(50);
+       
+       // entrer le prenom dans la data base
+       Button buttonpre2 = new Button("ok");
+       
+       buttonpre2.setLayoutX(750);
+       buttonpre2.setLayoutY(155);
+       buttonpre2.setFont(new Font("Arial", 17));
+       
+       buttonpre2.setOnAction(e -> System.out.println(prenom2.getText()));
+       
+       // entrer la date du certificat
+       
+       TextField Date = new TextField();
+       Date.setPromptText("LA DATE...");
+       Date.setLayoutX(450);
+       Date.setLayoutY(220);
+       Date.setPrefWidth(200);
+       Date.setPrefHeight(50);
+       
+       // entrer la date du certificat dans la data base
+       Button buttonDate = new Button("ok");
+       
+       buttonDate.setLayoutX(450);
+       buttonDate.setLayoutY(275);
+       buttonDate.setFont(new Font("Arial", 17));
+       
+       buttonDate.setOnAction(e -> System.out.println(Date.getText()));
+       
+       
+       //entrer LA DUREE DUN CONGE
+       
+       TextField cause = new TextField();
+       cause.setPromptText("LA DUREE DUN CONGE...");
+       cause.setLayoutX(750);
+       cause.setLayoutY(220);
+       cause.setPrefWidth(200);
+       cause.setPrefHeight(50);
+     //entrer LA DUREE DUN CONGE dans la data base
+       
+       Button buttoncause = new Button("ok");
+       
+       buttoncause.setLayoutX(750);
+       buttoncause.setLayoutY(275);
+       buttoncause.setFont(new Font("Arial", 17));
+       
+       buttoncause.setOnAction(e -> System.out.println(cause.getText()));
+       
+       //button pour imprimer la certificat
+       
+       Button imprimer = new Button("imprimer");
+       imprimer.setLayoutX(1050);
+       imprimer.setLayoutY(500);
+       imprimer.setFont(new Font("Arial", 30));
+       	
+       
+       
+        
+        root.getChildren().addAll(rectangle0,text,rdv,Fiche,ordonnance,consultation,welcome);
+        root.getChildren().add(imageView); 
+        root1.getChildren().addAll(rectangle1,backButton,buttonname1,name1,buttonpre1,prenom1,buttondwa,dwa,buttonduree,duree,buttoncat,textscene1);
+        root2.getChildren().addAll(rectangle2,buttonret,buttonname2,name2,buttonpre2,prenom2,Date,buttonDate,textsceneCAT,imprimer,cause,buttoncause);
+        root3.getChildren().addAll(	rectangle3,backfiche,imageView2,buttonname3,name3,buttonpre3,prenom3,buttonnum,num,textFICH);			    
+        root4.getChildren().addAll(rectangle,buttonname4,name4,buttonpre4,prenom4,backrdv,daterdv,buttondaterdv,buttonHEURE,HEURE,textrdv,imageView3);
+        root5.getChildren().addAll(rectangle5,buttonname5,name5,buttonpre5,prenom5,backo,chirurgicaux,buttonchirurgicaux,buttonmédicaux,médicaux,poids,buttonpoids,taille,buttontaille,textobsr,imageView4);
+        stage.show();
+              
+   }
+        
+}
+
